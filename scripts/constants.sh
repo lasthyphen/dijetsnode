@@ -9,7 +9,7 @@ DIJETSPATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )"; cd .. && pwd ) # Directory 
 dijetsnode_path="$DIJETSPATH/build/dijetsnode"
 plugin_dir=${PLUGIN_DIR:-$HOME/.dijetsnode/plugins}
 evm_path=${EVM_PATH:-$plugin_dir/evm}
-coreth_version=${CORETH_VERSION:-'v0.11.6-rc.0'}
+coreth_version=${CORETH_VERSION:-'v0.11.7-rc.0'}
 
 # Set the PATHS
 GOPATH="$(go env GOPATH)"
