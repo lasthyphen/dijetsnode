@@ -9,7 +9,6 @@ module github.com/lasthyphen/dijetsnode
 go 1.18
 
 require (
-	github.com/lasthyphen/dijetsnode v1.9.8
 	github.com/Microsoft/go-winio v0.5.2
 	github.com/NYTimes/gziphandler v1.1.1
 	github.com/ava-labs/ledger-avalanche/go v0.0.0-20230105152938-00a24d05a8c7

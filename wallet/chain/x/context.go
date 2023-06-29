@@ -6,9 +6,9 @@ package x
 import (
 	stdcontext "context"
 
-	"github.com/MetalBlockchain/metalgo/api/info"
-	"github.com/MetalBlockchain/metalgo/ids"
-	"github.com/MetalBlockchain/metalgo/vms/avm"
+	"github.com/lasthyphen/dijetsnode/api/info"
+	"github.com/lasthyphen/dijetsnode/ids"
+	"github.com/lasthyphen/dijetsnode/vms/avm"
 )
 
 var _ Context = (*context)(nil)
@@ -50,7 +50,7 @@ func NewContextFromClients(
 		return nil, err
 	}
 
-	asset, err := xChainClient.GetAssetDescription(ctx, "METAL")
+	asset, err := xChainClient.GetAssetDescription(ctx, "DJTX")
 	if err != nil {
 		return nil, err
 	}

@@ -8,23 +8,23 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/MetalBlockchain/metalgo/ids"
-	"github.com/MetalBlockchain/metalgo/utils"
-	"github.com/MetalBlockchain/metalgo/utils/constants"
-	"github.com/MetalBlockchain/metalgo/utils/formatting"
-	"github.com/MetalBlockchain/metalgo/utils/formatting/address"
-	"github.com/MetalBlockchain/metalgo/utils/json"
-	"github.com/MetalBlockchain/metalgo/utils/set"
-	"github.com/MetalBlockchain/metalgo/vms/avm"
-	"github.com/MetalBlockchain/metalgo/vms/avm/fxs"
-	"github.com/MetalBlockchain/metalgo/vms/nftfx"
-	"github.com/MetalBlockchain/metalgo/vms/platformvm/api"
-	"github.com/MetalBlockchain/metalgo/vms/platformvm/genesis"
-	"github.com/MetalBlockchain/metalgo/vms/propertyfx"
-	"github.com/MetalBlockchain/metalgo/vms/secp256k1fx"
+	"github.com/lasthyphen/dijetsnode/ids"
+	"github.com/lasthyphen/dijetsnode/utils"
+	"github.com/lasthyphen/dijetsnode/utils/constants"
+	"github.com/lasthyphen/dijetsnode/utils/formatting"
+	"github.com/lasthyphen/dijetsnode/utils/formatting/address"
+	"github.com/lasthyphen/dijetsnode/utils/json"
+	"github.com/lasthyphen/dijetsnode/utils/set"
+	"github.com/lasthyphen/dijetsnode/vms/avm"
+	"github.com/lasthyphen/dijetsnode/vms/avm/fxs"
+	"github.com/lasthyphen/dijetsnode/vms/nftfx"
+	"github.com/lasthyphen/dijetsnode/vms/platformvm/api"
+	"github.com/lasthyphen/dijetsnode/vms/platformvm/genesis"
+	"github.com/lasthyphen/dijetsnode/vms/propertyfx"
+	"github.com/lasthyphen/dijetsnode/vms/secp256k1fx"
 
-	xchaintxs "github.com/MetalBlockchain/metalgo/vms/avm/txs"
-	pchaintxs "github.com/MetalBlockchain/metalgo/vms/platformvm/txs"
+	xchaintxs "github.com/lasthyphen/dijetsnode/vms/avm/txs"
+	pchaintxs "github.com/lasthyphen/dijetsnode/vms/platformvm/txs"
 )
 
 const (
@@ -262,8 +262,8 @@ func FromConfig(config *Config) ([]byte, ids.ID, error) {
 	}
 	{
 		avax := avm.AssetDefinition{
-			Name:         "Metal",
-			Symbol:       "METAL",
+			Name:         "Dijets",
+			Symbol:       "DJTX",
 			Denomination: 9,
 			InitialState: map[string][]interface{}{},
 		}
@@ -296,7 +296,7 @@ func FromConfig(config *Config) ([]byte, ids.ID, error) {
 			return nil, ids.Empty, fmt.Errorf("couldn't parse memo bytes to string: %w", err)
 		}
 		avmArgs.GenesisData = map[string]avm.AssetDefinition{
-			"METAL": avax, // The AVM starts out with one asset: AVAX
+			"DJTX": avax, // The AVM starts out with one asset: AVAX
 		}
 	}
 	avmReply := avm.BuildGenesisReply{}
