@@ -23,7 +23,7 @@ const (
 	UnitTestName = "testing"
 	LocalName    = "local"
 
-	MainnetHRP  = "dijets"
+	MainnetHRP  = "metal"
 	TahoeHRP    = "tahoe"
 	UnitTestHRP = "testing"
 	LocalHRP    = "local"

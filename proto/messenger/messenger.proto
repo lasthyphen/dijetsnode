@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package messenger;
 
-option go_package = "github.com/lasthyphen/dijetsnode/proto/pb/messenger";
+option go_package = "github.com/MetalBlockchain/avalanchego/proto/pb/messenger";
 
 service Messenger {
   rpc Notify(NotifyRequest) returns (NotifyResponse);
